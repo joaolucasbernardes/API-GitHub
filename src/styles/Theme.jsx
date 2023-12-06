@@ -3,17 +3,11 @@ import React from "react";
 
 import { ThemeProvider } from "styled-components";
 
-const round = (num) =>
-  num
-    .toFixed(7)
-    .replace(/(\.[0-9]+?)0+$/, "$1")
-    .replace(/\.0$/, "");
-const rem = (px) => `${round(px / 16)}rem`;
 
 export const theme = {
   colors: {
     white: "#FFFFFF",
-    black: "#0C0D0F",
+    black: "#191919",
     red: "#E03131",
     orange: "#E8590C",
     yellow: "#FCC419",
@@ -35,6 +29,12 @@ export const theme = {
     gray900: "#141518",
     primary: "#F83600",
     secondary: "#FE8C00",
+    container: "#2d2d2d",
+    metalDark: "#7f8c8d",
+    metal: "#95a5a6",
+    light: "#ecf0f1",
+    champagneDark: "#bdc3c7",
+
   },
   fontFamily: {
     heading: ["IBM Plex Sans", "sans-serif"].join(","),
@@ -42,16 +42,16 @@ export const theme = {
     mono: ["IBM Plex Mono", "serif"].join(","),
   },
   fontSize: {
-    xs: rem(10),
-    sm: rem(12),
-    md: rem(14),
-    base: rem(16),
-    lg: rem(18),
-    xl: rem(20),
-    "2xl": rem(24),
-    "3xl": rem(32),
-    "4xl": rem(40),
-    "5xl": rem(64),
+    xs: '0px',
+    sm: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: "1200px",
+    large: '1.2rem',
+    title: "1.25rem",
+    subtitle: "1rem",
+    small: '.8rem',
+    normal: '1rem',
   },
 };
 
